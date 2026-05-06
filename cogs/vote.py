@@ -76,7 +76,14 @@ class Vote(commands.Cog):
     @app_commands.default_permissions(administrator=True) 
     async def slash_vote(self, interaction: discord.Interaction, 주제: str, 항목1: str, 항목2: str):
         view = VoteView(주제, 항목1, 항목2)
+        # 1. 먼저 채널에 투표 메시지를 띄웁니다.
         await interaction.response.send_message(embed=view.generate_embed(), view=view)
+        
+        # 2. 방금 봇이 띄운 그 투표 메시지를 다시 찾아옵니다.
+        message = await interaction.original_response()
+        
+        # 3. 그 메시지 바로 밑에 스레드(댓글창)를 자동으로 생성합니다!
+        await message.create_thread(name=f"💬 [{주제}] 의견 나누기", auto_archive_duration=1440)
 
 async def setup(bot):
     await bot.add_cog(Vote(bot))
