@@ -18,7 +18,7 @@ class Links(commands.Cog):
         embed.add_field(name="🐦 X (트위터)", value="[바로가기](https://x.com/hanyul_lustia_?s=21)", inline=True)
         embed.add_field(name="🎵 멜로밍", value="[바로가기](https://meloming.com/channel/hanyul)", inline=True)
         embed.add_field(name="💌 마슈마로", value="[바로가기](https://marshmallow-qa.com/olp7sqjuz9bfn48?t=JHPPUQ)", inline=True)
-        embed.add_field(name="📖 방송 사용법", value="[노션 바로가기](https://gigantic-uncle-c53.notion.site/1d3f84e0ed0780a1b791fa9b72f2ef7c)", inline=False)
+        embed.add_field(name="📖 방송 사용법", value="[바로가기](https://gigantic-uncle-c53.notion.site/1d3f84e0ed0780a1b791fa9b72f2ef7c)", inline=False)
 
 
         # ephemeral=True 덕분에 명령어 쓴 사람한테만 보이게 됩니다!
