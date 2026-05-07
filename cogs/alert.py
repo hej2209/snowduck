@@ -9,7 +9,7 @@ class Alert(commands.Cog):
         self.bot = bot
         self.is_live = False
         self.api_url = "https://api.rplay.live/account/getuser?userOid=68b00e18461659179fe6fbce"
-        self.stream_url = "https://rplay.live/creatorhome/68b00e18461659179fe6fbce"
+        self.stream_url = "https://rplay.live/live/68b00e18461659179fe6fbce"
         
         # [필수 수정] 알림을 띄울 채널 ID
         self.channel_id = 1421504363834118256
