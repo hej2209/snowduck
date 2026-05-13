@@ -32,7 +32,7 @@ class Alert(commands.Cog):
             now = datetime.datetime.now(tz_kst)
             
             # 파이썬 요일: 월(0), 화(1), 수(2), 목(3), 금(4), 토(5), 일(6)
-            target_days = [1, 4, 6]  # 화, 금, 일
+            target_days = [1, 2, 3, 4, 6]  # 화, 수, 목, 금, 일
             
             # 방송하는 요일이 아니면 API 확인 안 하고 바로 넘김
             if now.weekday() not in target_days:
